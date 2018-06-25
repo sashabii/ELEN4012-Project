@@ -1,0 +1,129 @@
+
+\documentclass[10pt,twocolumn]{witseiepaper}
+%
+% All KJN's macros and goodies (some shameless borrowing from SPL)
+\usepackage{KJN}
+\usepackage[super]{nth}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{listings}
+\usepackage{alltt}
+%\usepackage{matlab-prettifier}
+\usepackage{graphicx}
+\usepackage{changes}
+\usepackage{makecell}
+\usepackage{verbatim}
+\usepackage{algorithm,algpseudocode}
+\usepackage{balance}
+\usepackage{pdfpages}
+\usepackage{makecell}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+%\usepackage{flafter}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+%\usepackage[parfill]{parskip}
+%\usepackage{titlesec}
+%
+%\titleformat{\subsubsection}
+%{\normalfont\normalsize\itshape}{\thesubsubsection}{1em}{}
+%\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{0ex plus .2ex}
+\newcommand\Tstrut{\rule{0pt}{2.2ex}} 
+\usepackage{float}
+
+\lstset{language=Matlab, % Set colour for matlab code
+	breaklines=true,%
+	morekeywords={matlab2tikz},
+	keywordstyle=\color{blue},%
+	morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+	identifierstyle=\color{black},%
+	stringstyle=\color{mylilas},
+	commentstyle=\color{mygreen},%
+	showstringspaces=false,%without this there will be a symbol in the places where there is a space
+	numbers=left,%
+	numberstyle={\tiny \color{black}},% size of the numbers
+	numbersep=9pt, % this defines how far the numbers are from the text
+	emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+	%emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+%
+% PDF Info
+%
+\ifpdf
+\pdfinfo{
+/Title (INSTRUCTIONS AND STYLE GUIDELINES FOR THE PREPARATION OF FINAL YEAR LABORATORY PROJECT PAPERS : 2005 VERSION)
+/Author (Ken J Nixon)
+/CreationDate (D:200309251200)
+/ModDate (D:200510121530)
+/Subject (ELEN417/455 Paper Format, 2005)
+/Keywords (ELEN417, ELEN455, paper, instructions, style guidelines, laboratory project)
+}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+\title{ELEN4012 EMOTION RECOGNITION PROJECT PLAN}
+
+\author{Sasha Berkowitz (818737) \& Arunima Pathania (1117426)
+\thanks{School of Electrical \& Information Engineering, University of the
+Witwatersrand, Private Bag 3, 2050, Johannesburg, South Africa}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\abstract{ }
+
+\keywords{}
+
+\maketitle
+%\thispagestyle{empty}
+\pagestyle{plain}
+\setcounter{page}{1}
+%Elevator safety codes require, among other things, that the speed of the elevator be checked as it approaches a terminal landing to ensure that the speed can be reduced to a reasonable safe speed as it approaches the landing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{INTRODUCTION}
+
+\section{CONTEXTUALISATION}
+
+\section{PROBLEM SPECIFICATION}
+
+\section{DESIGN}
+
+\section{PROJECT MANAGEMENT}
+
+\section{RISKS \& MITIGATIONS}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{CONCLUSION}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\nocite{*}
+%\bibliographystyle{witseie}
+%\bibliography{meas}
+
+\newpage
+\onecolumn
+
+\begin{appendix}
+
+\end{appendix} 	
+
+%{\tiny \vfill \hfill \today \hspace{5mm} witseie-paper-2003.\TeX}
+
+
+\end{document}
+
+" vim: ts=4
+" vim: tw=78
+" vim: autoindent
+" vim: shiftwidth=4
