@@ -110,15 +110,15 @@ minimum height=3em, minimum width=3em]
 \tikzstyle{output} = [coordinate]
 \tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
 
-\begin{figure}[h]
+\begin{figure*}[h]
 	\centering
-	\begin{tikzpicture}[auto, node distance=2cm,>=latex']
+	\begin{tikzpicture}[auto, node distance=2.5cm,>=latex']
 	
 	\node [input, name=input] {};
 	
 	\node [block, right of=input,text width=1.7cm, text centered] (sensor) {Noise Cancellation};
 	\node [block, right of=sensor,node distance=2.5cm, text width=1.7cm, text centered] (cond1) {Signal Enhancement};
-	\node [block, right of=cond1,node distance=2.5cm, text width=1.7cm, text centered] (cond2) {Classification};
+	\node [block, right of=cond1,node distance=3cm, text width=2.5cm, text centered] (cond2) {Classification};
 	%\node [block, right of=cond2, node distance=2.5cm, text width=2.05cm, text centered] (cond3) {Voltage Comparator};
 	%\node [block, right of=cond3,node distance=2.5cm, text width=1.7cm, text centered] (proc) {Micro-Controller};
 	%\node [block, right of=proc,node distance=2.5cm, text width=1.7cm, text centered] (disp) {Display};
@@ -129,18 +129,31 @@ minimum height=3em, minimum width=3em]
 	%\draw [->] (cond2) -- node[name=v] {$ $} (cond3);
 	%\draw [->] (cond3) -- node[name=v] {$ $} (proc);
 	%\draw [->] (proc) -- node[name=v] {$ $} (disp);
-	%\node [output, right of=disp] (output) {};
+	\node [output, right of=cond2] (output) {};
 	\coordinate [below of=u] (measurements) {};
 	
 	\draw [draw,->] (input) -- node {$input$} (sensor);
-%	\draw [->] (cond2) -- node [name=y] {$ output$}(output);
+	\draw [->] (cond2) -- node [name=y] {$ output$}(output);
 	
 	\end{tikzpicture}
 	\caption{Block diagram of approach overview.}
 	\label{fig:sysOverview}
-\end{figure}
+\end{figure*}
 
 \subsection{Approach Details}
+
+\subsubsection{Signal Conditioning}
+% ARU
+% Please discuss the signal conditioning elements here and how they work (Look at his example report he gave us for layout)
+% 1 -> NPVSS-NLMS
+% 2 -> GSVSS-NLMS
+% 3&4 - Please find two other suited algorithms
+
+\subsubsection{Signal Enhancement}
+
+\subsubsection{Signal Classification}
+
+\subsubsection{User Interface}
 
 \section{PROJECT MANAGEMENT} % ~0.5 pages 
 Throughout the duration of the project, the partners will be in contact with each other regarding their progress or any other obstacles which they may face. In addition, at least one weekly face-to-face meeting will be held between the partners and project supervisor.
@@ -148,6 +161,14 @@ Throughout the duration of the project, the partners will be in contact with eac
 Project files will be housed on a private GitHub repository.
 
 The subsections following will outline how the project components listed in section \ref{approach} will be divided and the estimated time to be taken for each.
+
+\subsection{Signal Conditioning}
+
+\subsection{Signal Enhancement}
+
+\subsection{Signal Classification}
+
+\subsection{User Interface}
 
 \section{RISKS \& THEIR MITIGATIONS} % ~0.3 pages
 \subsection{Data Security}
