@@ -87,22 +87,88 @@ Witwatersrand, Private Bag 3, 2050, Johannesburg, South Africa}
 %\thispagestyle{empty}
 \pagestyle{plain}
 \setcounter{page}{1}
-%Elevator safety codes require, among other things, that the speed of the elevator be checked as it approaches a terminal landing to ensure that the speed can be reduced to a reasonable safe speed as it approaches the landing
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{INTRODUCTION}
 
-\section{CONTEXTUALISATION}
+\section{PROBLEM BACKGROUND} % ~0.75 pages
 
-\section{PROBLEM SPECIFICATION}
 
-\section{DESIGN}
+\section{PROBLEM SPECIFICATION}\label{spec} % ~1.25 pages
 
-\section{PROJECT MANAGEMENT}
+\section{PROPOSED APPROACH}\label{approach} % ~2 pages
 
-\section{RISKS \& MITIGATIONS}
+\subsection{Approach Overview}
+% Flow diagram
+% Gantt chart in appendix
+
+\tikzstyle{block} = [draw, fill=white, rectangle, 
+minimum height=3em, minimum width=3em]
+\tikzstyle{sum} = [draw, fill=white, circle, node distance=1cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}[auto, node distance=2cm,>=latex']
+	
+	\node [input, name=input] {};
+	
+	\node [block, right of=input,text width=1.7cm, text centered] (sensor) {Noise Cancellation};
+	\node [block, right of=sensor,node distance=2.5cm, text width=1.7cm, text centered] (cond1) {Signal Enhancement};
+	\node [block, right of=cond1,node distance=2.5cm, text width=1.7cm, text centered] (cond2) {Classification};
+	%\node [block, right of=cond2, node distance=2.5cm, text width=2.05cm, text centered] (cond3) {Voltage Comparator};
+	%\node [block, right of=cond3,node distance=2.5cm, text width=1.7cm, text centered] (proc) {Micro-Controller};
+	%\node [block, right of=proc,node distance=2.5cm, text width=1.7cm, text centered] (disp) {Display};
+	%	\node [block, right of=controller,node distance=2.5cm] (system) {System};
+	
+	\draw [->] (sensor) -- node[name=u] {$ $} (cond1);
+	\draw [->] (cond1) -- node[name=v] {$ $} (cond2);
+	%\draw [->] (cond2) -- node[name=v] {$ $} (cond3);
+	%\draw [->] (cond3) -- node[name=v] {$ $} (proc);
+	%\draw [->] (proc) -- node[name=v] {$ $} (disp);
+	%\node [output, right of=disp] (output) {};
+	\coordinate [below of=u] (measurements) {};
+	
+	\draw [draw,->] (input) -- node {$input$} (sensor);
+%	\draw [->] (cond2) -- node [name=y] {$ output$}(output);
+	
+	\end{tikzpicture}
+	\caption{Block diagram of approach overview.}
+	\label{fig:sysOverview}
+\end{figure}
+
+\subsection{Approach Details}
+
+\section{PROJECT MANAGEMENT} % ~0.5 pages 
+Throughout the duration of the project, the partners will be in contact with each other regarding their progress or any other obstacles which they may face. In addition, at least one weekly face-to-face meeting will be held between the partners and project supervisor.
+
+Project files will be housed on a private GitHub repository.
+
+The subsections following will outline how the project components listed in section \ref{approach} will be divided and the estimated time to be taken for each.
+
+\section{RISKS \& THEIR MITIGATIONS} % ~0.3 pages
+\subsection{Data Security}
+Data Stolen and misused.
+
+Will be mitigated by storing all collected data in password protected file and destroyed after.
+
+\subsection{Ethical Issues}
+Personal information disclosed, etc.
+
+Ethics clearance will be obtained prior to project. A script will be given to participants therefore no personal info. Each participant will be given information sheet on the project and sign a declaration.
+
+\subsection{Inaccurate Results}
+Data could be distorted and give inaccurate results.
+
+Recorded in soundproof chamber where possible. Tests will be run on data. Estimated percentage accuracy will be obtained.
+
+\subsection{Intellectual Property Risks}
+Google
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{CONCLUSION}
+\section{CONCLUSION} % ~0.2 pages
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

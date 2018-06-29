@@ -1,7 +1,13 @@
 \BOOKMARK [1][-]{section.1}{INTRODUCTION}{}% 1
-\BOOKMARK [1][-]{section.2}{CONTEXTUALISATION}{}% 2
+\BOOKMARK [1][-]{section.2}{PROBLEM BACKGROUND}{}% 2
 \BOOKMARK [1][-]{section.3}{PROBLEM SPECIFICATION}{}% 3
-\BOOKMARK [1][-]{section.4}{DESIGN}{}% 4
-\BOOKMARK [1][-]{section.5}{PROJECT MANAGEMENT}{}% 5
-\BOOKMARK [1][-]{section.6}{RISKS \046 MITIGATIONS}{}% 6
-\BOOKMARK [1][-]{section.7}{CONCLUSION}{}% 7
+\BOOKMARK [1][-]{section.4}{PROPOSED APPROACH}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Approach Overview}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{Approach Details}{section.4}% 6
+\BOOKMARK [1][-]{section.5}{PROJECT MANAGEMENT}{}% 7
+\BOOKMARK [1][-]{section.6}{RISKS \046 THEIR MITIGATIONS}{}% 8
+\BOOKMARK [2][-]{subsection.6.1}{Data Security}{section.6}% 9
+\BOOKMARK [2][-]{subsection.6.2}{Ethical Issues}{section.6}% 10
+\BOOKMARK [2][-]{subsection.6.3}{Inaccurate Results}{section.6}% 11
+\BOOKMARK [2][-]{subsection.6.4}{Intellectual Property Risks}{section.6}% 12
+\BOOKMARK [1][-]{section.7}{CONCLUSION}{}% 13
