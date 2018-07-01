@@ -8,5 +8,6 @@
 ``` python -m pip --upgrade pip ```
 
 - Install TensorFlow using the following:
+
 ``` pip install tensorflow ```
 
