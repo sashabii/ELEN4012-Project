@@ -155,7 +155,26 @@ Speech will be sourced from recordings taken of students. These will be done in 
 % 1 -> NPVSS-NLMS
 % 2 -> GSVSS-NLMS
 % 3&4 - Please find two other suited algorithms
-checking
+Signal conditioning refers to change in an input signal to meet the requirements of a system for which the input is being used.This project requires an individual to speak into a microphone and the audio signal is then conditioned according to the needs of the project. The audio signal will include background noise, channel distortion and the valuable speech which is of meaning to the researchers.  
+The process of removing the unwanted frequencies from the audio signal is called filtering.
+The human speech typically has a frequency response of 300 Hz to 3 kHz. This frequency band rejects most part of the noise it also rejects the plosive consonants like “p” and “t” which require a higher frequency to be correctly differentiated. This reason contributes to the selection of a higher frequency band which ranges over 300 Hz to 8 kHz[1]. To implement filtering of the audio signal the following filter algorithms are used : Non-parametric variable step size normalized least mean square (NPVSS-NLMS) algorithm , Generalized sigmoid variable step size normalized least mean square (GSVSS-NLMS) algorithm , Normalized lattice recursive least squares filter (NLRLS) algorithm and the fast affine projection algorithm. The following paragraph will explain how each of the algorithms filter noise from the desired audio signal.
+The NPVSS-NLMS algorithm is based on the standard Least Mean Square algorithm which is an adaptive filter. An adaptive filter is a system with has a transfer function controlled by variable parameters and methods to modify those parameters according to the systems requirements are based on an optimization algorithm. They are used to mimic a required filter by calculating the coefficients of the filter that relate to producing the least mean square of the error signal (difference between the desired and the actual signal). The purpose of it is to approach the optimum filter weights by updating the filter weights in a manner to converge to the optimum filter weight.The first step assumes small weights (zero in most cases) and, at each step, by finding the gradient of the mean square error, the weights are updated. The mean square error acts as a function of filter weights which are quadratic and thus, it has only one extremum, that minimizes the mean-square error, which is the optimal weight. 
+This method follows the stochastic gradient descent in which the filter is adapted based only on the current time error. The main problem of the algorithm is that it is sensitive to the scaling of its input when choosing a step-size parameter to guarantee stability.The NLMS algorithms solve this problem by normalizing with the power of the input. 
+The NPVSS-NLMS algorithm the estimates of the near-end echo path response is computed which is used to generate an estimate of echo. The estimate of echo is subtracted from the near-end microphone output to subtract the actual echo. The step-size parameter (μ) of a proposed non-parametric VSS-NLMS algorithm is given by:
+
+where, α(n) is the normalized step size, range is given.
+The NPVSS-NLMS-UM algorithm is : 
+Where h(n) is impulse response of the system, x(n) is the input signal, e(n) is the error signal and ‘n’ is the order of the impulse response modelled as the filter.
+
+
+[1] Stevens, K. N. (1998). Acoustic Phonetics. Cambridge, MA: The MIT Press.
+
+The NLRLS algorithm is based on the Recursive least squares filter algorithm which is an adaptive filter. The process of adaptive filters involves a cost function which is a criterion for the optimal performance of the filter which determines how to change the filter transfer function to minimize cost. It recursively searches for the coefficients that minimize a weighted linear least squarescost function which are related to the input to the filter.
+The Lattice Recursive Least Squares filter is based to the RLS algorithm except that it requires fewer arithmetic operations. It offers faster convergence rates. The normalized form of the LRLS has fewer recursions and variables. It is calculated by bounding the internal variable’s magnitude by one through normalization of the internal variables.
+
+THE AFFINE PROJECTION ALGORITHM
+The algorithm’s key features include Least Mean Square like complexity and memory requirements (low), and Recursive Least Square like convergence (fast) for the case where the excitation signal is speech. The algorithm has a filter update equation, which uses N (called projection order) vectors of the input signal instead of one vector like NLMS algorithm. 
+Fast Affine Projection (FAP) requires the solution to a system of equations involving the implicit inverse of the excitation signal’s covariance matrix. The fast affine projection algorithm reduces the cost of the Affine Projection algorithm by N, thus it is suitable for higher projection orders. The FAP algorithm needs to calculate the forward and backward linear prediction filters and the minimum value of the sum of prediction-error squares, whose values are recursively computed
 \subsubsection{Signal Classification}
 % Tensorflow
 
