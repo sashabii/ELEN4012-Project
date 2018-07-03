@@ -1,6 +1,12 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\url}[1]{{\tt #1}}
 \providecommand{\urlprefix}{URL }
+
+\bibitem{recordingFreq}
+A.~R. Hill.
+\newblock \enquote{Analysis of Voice Recordings Made Using "Voice Memos"
+  Application for iOS.}
+\newblock {\em University of Colorado, Denver\/}, p.~28, 2014.
 
 \end{thebibliography}
