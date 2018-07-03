@@ -1,21 +1,30 @@
 \BOOKMARK [1][-]{section.1}{INTRODUCTION}{}% 1
 \BOOKMARK [1][-]{section.2}{PROBLEM BACKGROUND}{}% 2
 \BOOKMARK [1][-]{section.3}{PROBLEM SPECIFICATION}{}% 3
-\BOOKMARK [1][-]{section.4}{PROPOSED APPROACH}{}% 4
-\BOOKMARK [2][-]{subsection.4.1}{Approach Overview}{section.4}% 5
-\BOOKMARK [2][-]{subsection.4.2}{Approach Details}{section.4}% 6
-\BOOKMARK [3][-]{subsubsection.4.2.1}{Signal Conditioning}{subsection.4.2}% 7
-\BOOKMARK [3][-]{subsubsection.4.2.2}{Signal Enhancement}{subsection.4.2}% 8
-\BOOKMARK [3][-]{subsubsection.4.2.3}{Signal Classification}{subsection.4.2}% 9
-\BOOKMARK [3][-]{subsubsection.4.2.4}{User Interface}{subsection.4.2}% 10
-\BOOKMARK [1][-]{section.5}{PROJECT MANAGEMENT}{}% 11
-\BOOKMARK [2][-]{subsection.5.1}{Signal Conditioning}{section.5}% 12
-\BOOKMARK [2][-]{subsection.5.2}{Signal Enhancement}{section.5}% 13
-\BOOKMARK [2][-]{subsection.5.3}{Signal Classification}{section.5}% 14
-\BOOKMARK [2][-]{subsection.5.4}{User Interface}{section.5}% 15
-\BOOKMARK [1][-]{section.6}{RISKS \046 THEIR MITIGATIONS}{}% 16
-\BOOKMARK [2][-]{subsection.6.1}{Data Security}{section.6}% 17
-\BOOKMARK [2][-]{subsection.6.2}{Ethical Issues}{section.6}% 18
-\BOOKMARK [2][-]{subsection.6.3}{Inaccurate Results}{section.6}% 19
-\BOOKMARK [2][-]{subsection.6.4}{Intellectual Property Risks}{section.6}% 20
-\BOOKMARK [1][-]{section.7}{CONCLUSION}{}% 21
+\BOOKMARK [2][-]{subsection.3.1}{Overview}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Requirements}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Assumptions}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{Constraints}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.5}{Success Criteria}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{PROPOSED APPROACH}{}% 9
+\BOOKMARK [2][-]{subsection.4.1}{Approach Overview}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.2}{Approach Details}{section.4}% 11
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Speech Input}{subsection.4.2}% 12
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Signal Enhancement}{subsection.4.2}% 13
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Signal Classification}{subsection.4.2}% 14
+\BOOKMARK [3][-]{subsubsection.4.2.4}{Output}{subsection.4.2}% 15
+\BOOKMARK [3][-]{subsubsection.4.2.5}{User Interface}{subsection.4.2}% 16
+\BOOKMARK [2][-]{subsection.4.3}{Training \046 Testing}{section.4}% 17
+\BOOKMARK [1][-]{section.5}{PROJECT MANAGEMENT}{}% 18
+\BOOKMARK [2][-]{subsection.5.1}{Prerequisites}{section.5}% 19
+\BOOKMARK [2][-]{subsection.5.2}{Data Collection}{section.5}% 20
+\BOOKMARK [2][-]{subsection.5.3}{Signal Enhancement}{section.5}% 21
+\BOOKMARK [2][-]{subsection.5.4}{Signal Classification}{section.5}% 22
+\BOOKMARK [2][-]{subsection.5.5}{User Interface}{section.5}% 23
+\BOOKMARK [1][-]{section.6}{RISKS \046 THEIR MITIGATIONS}{}% 24
+\BOOKMARK [2][-]{subsection.6.1}{Data Security}{section.6}% 25
+\BOOKMARK [2][-]{subsection.6.2}{Ethical Issues}{section.6}% 26
+\BOOKMARK [2][-]{subsection.6.3}{Inaccurate Results}{section.6}% 27
+\BOOKMARK [2][-]{subsection.6.4}{Intellectual Property Risks}{section.6}% 28
+\BOOKMARK [1][-]{section.7}{CONCLUSION}{}% 29
+\BOOKMARK [1][-]{appendix.A}{Gantt Chart}{}% 30

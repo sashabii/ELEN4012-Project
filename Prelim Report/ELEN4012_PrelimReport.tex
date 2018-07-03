@@ -27,12 +27,9 @@
 %\usepackage{flafter}
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows}
-%\usepackage[parfill]{parskip}
-%\usepackage{titlesec}
-%
-%\titleformat{\subsubsection}
-%{\normalfont\normalsize\itshape}{\thesubsubsection}{1em}{}
-%\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{0ex plus .2ex}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{pgfgantt}
 \newcommand\Tstrut{\rule{0pt}{2.2ex}} 
 \usepackage{float}
 
@@ -92,10 +89,18 @@ Witwatersrand, Private Bag 3, 2050, Johannesburg, South Africa}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{INTRODUCTION}
 
-\section{PROBLEM BACKGROUND} % ~0.75 pages
+\section{PROBLEM BACKGROUND} % ~1 page
+% Artificial intellegence
 
+% How emotional recognition fits in and why it's relevant
 
-\section{PROBLEM SPECIFICATION}\label{spec} % ~1.25 pages
+\section{PROBLEM SPECIFICATION}\label{spec} % ~1.5 pages
+\subsection{Overview}
+\subsection{Requirements}
+\subsection{Assumptions}
+\subsection{Constraints}
+\subsection{Success Criteria}
+
 
 \section{PROPOSED APPROACH}\label{approach} % ~2 pages
 
@@ -141,19 +146,36 @@ minimum height=3em, minimum width=3em]
 \end{figure*}
 
 \subsection{Approach Details}
+\subsubsection{Speech Input}
+Speech will be sourced from recordings taken of students. These will be done in a soundproof chamber in order to reduce external interruption. In order ot reduce costs they will be done one of the student's iPhones which record at as M4A files, which will be converted to .WAV files for use. *Recording specs* [reference paper]
 
-\subsubsection{Signal Conditioning}
+\subsubsection{Signal Enhancement}
 % ARU
 % Please discuss the signal conditioning elements here and how they work (Look at his example report he gave us for layout)
 % 1 -> NPVSS-NLMS
 % 2 -> GSVSS-NLMS
 % 3&4 - Please find two other suited algorithms
 
-\subsubsection{Signal Enhancement}
-
 \subsubsection{Signal Classification}
+% Tensorflow
+
+% Neural net model
+
+% Number of hidden layers chosen
+
+\subsubsection{Output}
+% Outputed at the interface as the emotion 
 
 \subsubsection{User Interface}
+% UI developed in Python
+% Users will be able to record inputs to be sent through the network
+
+\subsection{Training \& Testing}
+% Describe training, validatin, testing works in neural net
+
+% Data gathered from students and from databases online
+
+% Ratios used
 
 \section{PROJECT MANAGEMENT} % ~0.5 pages 
 Throughout the duration of the project, the partners will be in contact with each other regarding their progress or any other obstacles which they may face. In addition, at least one weekly face-to-face meeting will be held between the partners and project supervisor.
@@ -162,13 +184,38 @@ Project files will be housed on a private GitHub repository.
 
 The subsections following will outline how the project components listed in section \ref{approach} will be divided and the estimated time to be taken for each.
 
-\subsection{Signal Conditioning}
+\subsection{Prerequisites}
+Ethics Clearance
+
+Installing all needed for project
+
+Set up project repo
+
+\textbf{Resources required:} Git
+
+\subsection{Data Collection}
+
+Source training data
+
+Meet with students to record data
+
+\textbf{Resources required:} Microphone, Recording application, access to soundproof chamber
+
 
 \subsection{Signal Enhancement}
 
+\textbf{Resources required:} Python 3.5
+
+
 \subsection{Signal Classification}
 
+\textbf{Resources required:} Python 3.5, TensorFlow
+
+
 \subsection{User Interface}
+
+\textbf{Resources required:} Python, TKinter
+
 
 \section{RISKS \& THEIR MITIGATIONS} % ~0.3 pages
 \subsection{Data Security}
@@ -195,17 +242,33 @@ Google
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %\nocite{*}
-%\bibliographystyle{witseie}
-%\bibliography{meas}
+\bibliographystyle{witseie}
+\bibliography{prelim}
 
 \newpage
 \onecolumn
 
 \begin{appendix}
-
+	
+	\section{Gantt Chart}
+	
+		\begin{ganttchart}{1}{12}
+			\gantttitle{2011}{12} \\
+			\gantttitlelist{1,...,12}{1} \\
+			\ganttgroup{Group 1}{1}{7} \\
+			\ganttbar{Task 1}{1}{2} \\
+			\ganttlinkedbar{Task 2}{3}{7} \ganttnewline
+			\ganttmilestone{Milestone}{7} \ganttnewline
+			\ganttbar{Final Task}{8}{12}
+			\ganttlink{elem2}{elem3}
+			\ganttlink{elem3}{elem4}
+		\end{ganttchart}
+	
+	
+	
 \end{appendix} 	
 
-%{\tiny \vfill \hfill \today \hspace{5mm} witseie-paper-2003.\TeX}
+{\tiny \vfill \hfill \today \hspace{5mm} witseie-paper-2003.\TeX}
 
 
 \end{document}

@@ -1,11 +1,5 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: ELEN4012_PrelimReport.aux
 The style file: witseie.bst
-Database file #1: meas.bib
-Warning--empty journal in elevators_2015
-Warning--empty journal in tachometer
-Warning--empty journal in rotary_encoder_2017
-Warning--empty journal in hb100_datasheet
-Warning--empty year in hb100_datasheet
-Warning--empty journal in LM324Datasheet
-Warning--empty year in LM324Datasheet
-(There were 7 warnings)
+I found no \citation commands---while reading file ELEN4012_PrelimReport.aux
+Database file #1: prelim.bib
+(There was 1 error message)
