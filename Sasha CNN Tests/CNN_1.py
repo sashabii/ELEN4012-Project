@@ -39,9 +39,9 @@ img_width, img_height = 1092, 315
 
 train_data_dir = 'data/train'
 validation_data_dir = 'data/validation'
-nb_train_samples = 400
-nb_validation_samples = 160
-epochs = 50
+nb_train_samples = 520
+nb_validation_samples = 136
+epochs = 1
 batch_size = 16
 
 if K.image_data_format() == 'channels_first':
@@ -50,15 +50,15 @@ else:
     input_shape = (img_width, img_height, 3)
 
 model = Sequential()
-model.add(Conv2D(32, (3, 3), input_shape=(1092, 315,3)))
+model.add(Conv2D(32, (5, 5), input_shape=(503, 376,3)))
 model.add(Activation('relu'))
 model.add(MaxPooling2D(pool_size=(2, 2), dim_ordering="th"))
 
-model.add(Conv2D(32, (3, 3), dim_ordering="th"))
+model.add(Conv2D(64, (5, 5), dim_ordering="th"))
 model.add(Activation('relu'))
 model.add(MaxPooling2D(pool_size=(2, 2), dim_ordering="th"))
 
-model.add(Conv2D(64, (3, 3)))
+model.add(Conv2D(128, (5, 5)))
 model.add(Activation('relu'))
 model.add(MaxPooling2D(pool_size=(2, 2), dim_ordering="th"))
 
@@ -91,14 +91,14 @@ test_datagen = ImageDataGenerator(rescale=1./255)
 # batches of augmented image data
 train_generator = train_datagen.flow_from_directory(
         'data/train',  # this is the target directory
-        target_size=(1092, 315),  # all images will be resized to 150x150
+        target_size=(503, 376),  # all images will be resized to 150x150
         batch_size=batch_size,
         class_mode='binary')  # since we use binary_crossentropy loss, we need binary labels
 
 # this is a similar generator, for validation data
 validation_generator = test_datagen.flow_from_directory(
         'data/validation',
-        target_size=(1092, 315),
+        target_size=(503, 376),
         batch_size=batch_size,
         class_mode='binary')
 
