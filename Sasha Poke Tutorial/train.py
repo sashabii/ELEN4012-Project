@@ -33,7 +33,7 @@ args = vars(ap.parse_args())
 
 # initialize the number of epochs to train for, initial learning rate,
 # batch size, and image dimensions
-EPOCHS = 300
+EPOCHS = 500
 INIT_LR = 1e-3
 BS = 32
 IMAGE_DIMS = (96, 96, 3)
