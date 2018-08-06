@@ -14,9 +14,7 @@ def convert_to_image(birdSoundPath, birdName):
     save_image(picName)
 
 def save_image(picName):
-    path = os.getcwd() + '\\MFCCs_v4\\'
-    if not os.path.exists(path):
-        os.makedirs(path)
+    path = 'C:\\Users\\Prashant Prakash\\Desktop\\MFCC-pics'
     fileName = path + picName
     plt.savefig(fileName, bbox_inches='tight', pad_inches=0)
 
@@ -27,13 +25,16 @@ def main():
     totalFiles = 1496
     count = 1
 
-    path = os.getcwd() + '\\Final_DB\\final_disgust\\'
-    fileNames = os.listdir(path)
-    for fileName in fileNames:
-        birdSound = path + fileName
-        convert_to_image(birdSound, fileName)
-        print(fileName)
-        count = count + 1
+    for file in os.listdir('C:\\Users\\Prashant Prakash\\Desktop\\DB2\\actor\\ELEN4012-Project\\DB Audio\\Unfiltered\\final_fear'):
+	filename = os.fsdecode(file)
+
+    path = 'C:\\Users\\Prashant Prakash\\Desktop\\DB2\\actor\\ELEN4012-Project\\DB Audio\\Unfiltered\\final_fear\\'
+    
+    
+    birdSound = path + filename
+    convert_to_image(birdSound, filename)
+    print(filename)
+    count = count + 1
 
 if __name__ == "__main__":
     main()
