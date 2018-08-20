@@ -11,3 +11,9 @@
 
 ``` pip install tensorflow ```
 
+<h3>Running Classifier Application</h3>
+
+- Navigate to the <i>Front-end</i> folder and run the following command:
+
+``` python sasha_test.py ```
+
