@@ -1,4 +1,5 @@
 import sys, pyaudio, wave,urllib.request, librosa.display, os, pickle, cv2
+from pydub import AudioSegment
 import numpy as np
 from PyQt4 import QtGui, QtCore
 import numpy, scipy, matplotlib.pyplot as plt, librosa, sklearn
@@ -10,7 +11,7 @@ CHUNK = 1024
 FORMAT = pyaudio.paInt16
 CHANNELS = 2
 RATE = 44100
-RECORD_SECONDS = 5
+RECORD_SECONDS = 4
 WAVE_OUTPUT_FILENAME = "tmp\\recording.wav"
 FILTERED_OUTPUT_FILENAME= "tmp\\filtered.wav"
 MFCC_OUTPUT_FILENAME = "tmp\\mfcc.png"
@@ -18,8 +19,8 @@ MODEL_FILE = "model\\model.model"
 PICKLE_FILE = "model\\lb.pickle"
 
 # Filter Variables
-lowpass = 1300 
-highpass = 6000 
+lowpass = 3850 
+highpass = 7000 
 
 class Window(QtGui.QMainWindow):
 
@@ -59,6 +60,9 @@ class Window(QtGui.QMainWindow):
 	def recordVoice(self):
 		self.status.setText("Recording...")
 		self.status.repaint()
+		self.classification.setText("")
+		self.classification.repaint()
+
 		p = pyaudio.PyAudio()
 		stream = p.open(format=FORMAT, channels=CHANNELS,rate=RATE,
                         input=True,frames_per_buffer=CHUNK)
@@ -79,6 +83,10 @@ class Window(QtGui.QMainWindow):
 		wf.setframerate(RATE)
 		wf.writeframes(b''.join(frames)) 
 		wf.close()
+
+		newAudio = AudioSegment.from_wav(WAVE_OUTPUT_FILENAME, "r")
+		newAudio = newAudio[1000:3000]
+		newAudio.export(WAVE_OUTPUT_FILENAME, format="wav")
 
 		self.status.setText("Recording Complete!")
 		self.status.repaint()
@@ -143,6 +151,7 @@ class Window(QtGui.QMainWindow):
 		self.status.repaint()
 
 		image = cv2.imread(MFCC_OUTPUT_FILENAME)
+		#image = cv2.imread("tmp\\ang0.png")
 		image = cv2.resize(image, (96,96))
 		image = image.astype("float") / 255.0
 		image = img_to_array(image)
