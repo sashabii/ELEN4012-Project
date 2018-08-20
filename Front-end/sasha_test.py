@@ -17,10 +17,11 @@ FILTERED_OUTPUT_FILENAME= "tmp\\filtered.wav"
 MFCC_OUTPUT_FILENAME = "tmp\\mfcc.png"
 MODEL_FILE = "model\\model.model"
 PICKLE_FILE = "model\\lb.pickle"
+WEIGHT_FILE = "model\\weights-improvement-425-0.72.hdf5"
 
 # Filter Variables
-lowpass = 3850 
-highpass = 7000 
+lowpass = 1300
+highpass = 6000 
 
 class Window(QtGui.QMainWindow):
 
@@ -158,6 +159,7 @@ class Window(QtGui.QMainWindow):
 		image = np.expand_dims(image, axis=0)
 
 		model = load_model(MODEL_FILE)
+		model.load_weights(WEIGHT_FILE)
 		lb = pickle.loads(open(PICKLE_FILE, "rb").read())
 
 		print("[INFO] classifying image...")
